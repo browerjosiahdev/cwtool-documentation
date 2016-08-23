@@ -1,5 +1,7 @@
 #Create
 
+__How to create new items.__
+
 ##Component
 
 **URL**: /api/components
@@ -96,6 +98,8 @@
 
 #Delete
 
+__How to delete pre-existing items, or items that have been soft deleted.__
+
 ##Component
 
 **URL**: /api/components/{id}
@@ -121,6 +125,8 @@
 
 #Update
 
+__How to update data for pre-existing items.__
+
 ##Component
 
 **URL**: /api/components
@@ -140,6 +146,8 @@
 
 #Restore
 
+__How to restore items that have been soft deleted.__
+
 ##Component
 
 **URL**: /api/components/restore/{id}
@@ -156,6 +164,8 @@
 **Error**: (xhr, status, err)
 
 #Move
+
+__How to update the parent/child relationship of items.__
 
 ##Node
 
