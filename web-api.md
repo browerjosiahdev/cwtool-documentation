@@ -1,13 +1,14 @@
 #Create
 
-##Components
+##Component
+
 **URL**: /api/components
 
 **Method**: POST
 
-**Data Type**: JSON
-
 **Content Type**: application/json; charset=utf-8
+
+**Data Type**: JSON
 
 **Data**:
 ```javascript
@@ -38,6 +39,7 @@
   "errors": null
 }
 ```
+
 **Success**: (data)
 - data
 ```javascript
@@ -89,4 +91,83 @@
   "exception": null
 }
 ```
+
+**Error**: (xhr, status, err)
+
+#Delete
+
+##Component
+
+**URL**: /api/components/{id}
+
+**Method**: DELETE
+
+**Content Type**: application/json; charset=utf-8
+
+**Data Type**: JSON
+
+**Data**: true/false (is permanent?)
+
+**Success**: (data)
+- data
+```javascript
+{
+  "failed": false,
+  "exception": null
+}
+```
+
+**Error**: (xhr, status, err)
+
+#Update
+
+##Component
+
+**URL**: /api/components
+
+**Method**: PUT
+
+**Content Type**: application/json; charset=utf-8
+
+**Data Type**: JSON
+
+**Data**: [see Create -> Component]
+
+**Success**: (data)
+- data [see Create -> Component]
+
+**Error**: (xhr, status, err)
+
+#Restore
+
+##Component
+
+**URL**: /api/components/restore/{id}
+
+**Method**: POST
+
+**Content Type**: application/json; charset=utf-8
+
+**Data Type**: JSON
+
+**Success**: (data)
+- data [see Delete -> Component]
+
+**Error**: (xhr, status, err)
+
+#Move
+
+##Node
+
+**URL**: /api/components/move/{id}/to/{newParentId}/{newIndex}
+
+**Method**: POST
+
+**Content Type**: application/json; charset=utf-8
+
+**Data Type**: JSON
+
+**Success**: (data)
+- data [see Delete -> Component]
+
 **Error**: (xhr, status, err)
