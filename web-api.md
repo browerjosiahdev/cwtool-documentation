@@ -1,6 +1,6 @@
 #Create
 
-__How to create new items.__
+_How to create new items._
 
 ##Component
 
@@ -98,7 +98,7 @@ __How to create new items.__
 
 #Delete
 
-__How to delete pre-existing items, or items that have been soft deleted.__
+_How to delete pre-existing items, or items that have been soft deleted._
 
 ##Component
 
@@ -125,7 +125,7 @@ __How to delete pre-existing items, or items that have been soft deleted.__
 
 #Update
 
-__How to update data for pre-existing items.__
+_How to update data for pre-existing items._
 
 ##Component
 
@@ -146,7 +146,7 @@ __How to update data for pre-existing items.__
 
 #Restore
 
-__How to restore items that have been soft deleted.__
+_How to restore items that have been soft deleted._
 
 ##Component
 
@@ -165,7 +165,7 @@ __How to restore items that have been soft deleted.__
 
 #Move
 
-__How to update the parent/child relationship of items.__
+_How to update the parent/child relationship of items._
 
 ##Node
 
