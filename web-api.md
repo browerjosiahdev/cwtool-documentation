@@ -2,6 +2,96 @@
 
 _How to create new items._
 
+##Node
+
+**URL**: /api/nodes
+
+**Method**: POST
+
+**Content Type**: application/json; charset=utf-8
+
+**Data Type**: JSON
+
+**Data**:
+```javascript
+{
+	"parentId": 1,
+	"componentId": 27,
+	"javascriptProcessorId": 1,
+	"styleProcessorId": 5,
+	"name": "Test Shell",
+	"nodeType": "Course",
+	"publish": false,
+	"relativePath": null,
+	"canEdit": false,
+	"canDelete": false,
+	"projectName": null,
+	"data": null,
+	"processedData": null,
+	"attachedData": null,
+	"id": 0,
+	"customGuid": null,
+	"gggParentName": null,
+	"ggParentName": null,
+	"gParentName": null,
+	"parentName": "BaNCS Systems Training",
+	"componentName": null,
+	"childComponentId": null,
+	"projectId": 1,
+	"isDeleted": false,
+	"orderingIndex": 0,
+	"isInDevelopment": false,
+	"createdDate": "0001-01-01T00:00:00",
+	"lastModifiedDate": "0001-01-01T00:00:00",
+	"errors": null
+}
+```
+
+**Success**: (data)
+- data
+```javascript
+{
+	"result": {
+		"errors": null,
+		"entity": {
+			"canEdit": true,
+			"canDelete": true,
+			"projectName": "BaNCS Systems Training",
+			"data": "{\"id\":\"p-285\",\"parentId\":\"ZionsShell\",\"template\":null,\"schema\":null,\"attachedSchema\":null,\"style\":null,\"globalStyle\":null,\"data\":\"{}\",\"previewShell\":null,\"javascript\":null,\"globalJavascript\":null,\"dynamicContent\":null,\"templateProcessorId\":0,\"javascriptProcessorId\":1,\"styleProcessorId\":5,\"languageOverrides\":null}",
+			"processedData": "{\"id\":\"p-285\",\"parentId\":\"ZionsShell\",\"template\":null,\"schema\":null,\"attachedSchema\":null,\"style\":null,\"globalStyle\":null,\"data\":\"{}\",\"previewShell\":null,\"javascript\":null,\"globalJavascript\":null,\"dynamicContent\":null,\"templateProcessorId\":0,\"javascriptProcessorId\":1,\"styleProcessorId\":5,\"languageOverrides\":null}",
+			"attachedData": null,
+			"id": 285,
+			"customGuid": null,
+			"parentId": 1,
+			"gggParentName": null,
+			"ggParentName": null,
+			"gParentName": null,
+			"parentName": "BaNCS Systems Training",
+			"componentId": 27,
+			"componentName": "ZionsShell",
+			"javascriptProcessorId": 1,
+			"styleProcessorId": 5,
+			"childComponentId": 1,
+			"projectId": 1,
+			"isDeleted": false,
+			"orderingIndex": 9,
+			"name": "Test Shell",
+			"nodeType": "Course",
+			"isInDevelopment": false,
+			"publish": false,
+			"relativePath": null,
+			"createdDate": "0001-01-01T00:00:00",
+			"lastModifiedDate": "0001-01-01T00:00:00",
+			"errors": null
+		}
+	},
+	"failed": false,
+	"exception": null
+}
+```
+
+**Error**: (xhr, status, err)
+
 ##Component
 
 **URL**: /api/components
@@ -100,6 +190,29 @@ _How to create new items._
 
 _How to delete pre-existing items, or items that have been soft deleted._
 
+##Node
+
+**URL**: /api/nodes/{id}
+
+**Method**: DELETE
+
+**Content Type**: application/json; charset=utf-8
+
+**Data Type**: JSON
+
+**Data**: true/false (is permanent?)
+
+**Success**: (data)
+- data
+```javascript
+{
+  "failed": false,
+  "exception": null
+}
+```
+
+**Error**: (xhr, status, err)
+
 ##Component
 
 **URL**: /api/components/{id}
@@ -127,6 +240,23 @@ _How to delete pre-existing items, or items that have been soft deleted._
 
 _How to update data for pre-existing items._
 
+##Node
+
+**URL**: /api/nodes
+
+**Method**: PUT
+
+**Content Type**: application/json; charset=utf-8
+
+**Data Type**: JSON
+
+**Data**: _[see Create -> Node]_
+
+**Success**: (data)
+- data _[see Create -> Node]_
+
+**Error**: (xhr, status, err)
+
 ##Component
 
 **URL**: /api/components
@@ -137,16 +267,37 @@ _How to update data for pre-existing items._
 
 **Data Type**: JSON
 
-**Data**: [see Create -> Component]
+**Data**: _[see Create -> Component]_
 
 **Success**: (data)
-- data [see Create -> Component]
+- data _[see Create -> Component]_
 
 **Error**: (xhr, status, err)
 
 #Restore
 
 _How to restore items that have been soft deleted._
+
+##Node
+
+**URL**: /api/nodes/restore/{id}
+
+**Method**: POST
+
+**Content Type**: application/json; charset=utf-8
+
+**Data Type**: JSON
+
+**Success**: (data)
+- data
+```javascript
+{
+  "failed": false,
+  "exception": null
+}
+```
+
+**Error**: (xhr, status, err)
 
 ##Component
 
@@ -159,7 +310,13 @@ _How to restore items that have been soft deleted._
 **Data Type**: JSON
 
 **Success**: (data)
-- data [see Delete -> Component]
+- data
+```javascript
+{
+  "failed": false,
+  "exception": null
+}
+```
 
 **Error**: (xhr, status, err)
 
@@ -169,7 +326,7 @@ _How to update the parent/child relationship of items._
 
 ##Node
 
-**URL**: /api/components/move/{id}/to/{newParentId}/{newIndex}
+**URL**: /api/nodes/move/{id}/to/{newParentId}/{newIndex}
 
 **Method**: POST
 
@@ -178,6 +335,12 @@ _How to update the parent/child relationship of items._
 **Data Type**: JSON
 
 **Success**: (data)
-- data [see Delete -> Component]
+- data
+```javascript
+{
+  "failed": false,
+  "exception": null
+}
+```
 
 **Error**: (xhr, status, err)
