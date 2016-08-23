@@ -2,9 +2,13 @@
 
 ##Components
 **URL**: /api/components
+
 **Method**: POST
+
 **Data Type**: JSON
+
 **Content Type**: application/json; charset=utf-8
+
 **Data**:
 ```javascript
 {
